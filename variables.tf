@@ -72,6 +72,11 @@ variable "awsvpc_service_subnetids" {
   default     = []
 }
 
+variable "assign_public_ip" {
+  description = "Assign a public IP address to the ENI (Fargate launch type only, no LB option only)."
+  default = "false"
+}
+
 variable "lb_internal" {
   description = "Indicates if the load balancer should be internal or external."
   default     = "true"
